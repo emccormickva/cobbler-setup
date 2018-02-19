@@ -1,0 +1,22 @@
+use_ssh_key: False
+disable_selinux: False
+ssh_key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+manage_dhcp: 0
+manage_dns: 1
+pxe_just_once: 1
+zone_name: dcos.altamiracorp.com
+zone_reverse_name: 10.101.200
+zone_slave: 10.101.10.10
+server: 10.101.200.150
+next_server: 10.101.200.150
+dhcp_range_start: 10.101.200.100
+dhcp_range_end: 10.101.200.200
+dhcp_netmask: 255.255.255.0
+dhcp_gateway: 10.101.200.1
+dhcp_dns_server: 10.101.200.150
+distro_mnt: /mnt
+distro_name: CentOS-7
+distro_iso: /tmp/CentOS-7-x86_64-DVD-1611.iso
+distro_arch: x86_64
+kickstart_path: CentOS-7.ks
+
